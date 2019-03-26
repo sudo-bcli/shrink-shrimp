@@ -11,6 +11,9 @@ package-lock.json
 .DS_Store
 Thumbs.db
 
+# release builds
+release-builds
+
 # IDEs configurations
 # want to know more about IDE .gitignore?
 # @see https://www.gitignore.io/

@@ -15,7 +15,7 @@ const shell  = require('shelljs');      // cli executor
 const lang   = require('./locales').en; // locales
 
 // suffix of shrinked files
-const pdf_suffix = '_shrink';
+const pdf_prefix = 'shrink_';
 
 // global varialbes, DO NOT CHANGE
 let shrinking = false;
@@ -188,7 +188,7 @@ function parsePath(pdfPath) {
         let dir = path.dirname(pdfPath);
         let filename = path.basename(pdfPath).replace('.PDF', '.pdf');
         let ps = path.join(dir, '.' + filename.replace('.pdf', '.ps')); // ghostscript would start with '.' thus hidden from user
-        let out = path.join(dir, filename.replace('.pdf', pdf_suffix + '.pdf'));
+        let out = path.join(dir, pdf_prefix + filename);
         resolve({in: pdfPath, ps: ps, out: out});
     });
 }

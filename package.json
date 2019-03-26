@@ -15,9 +15,9 @@
   "main": "main.js",
   "scripts": {
     "start": "npx electron .",
-    "build-mac": "npx electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/icon-mac.icns --prune=true --out=release-builds",
-    "build-win": "npx electron-packager . Shrink-Shrimp --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/icon-win.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Shrink Shrimp\"",    
-    "build-linux": "npx electron-packager . Shrink-Shrimp --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/icon-linux.png --prune=true --out=release-builds"
+    "build-mac": "npx electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/img/shrimp.png --prune=true --out=release-builds",
+    "build-win": "npx electron-packager . Shrink-Shrimp --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/img/shrimp.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Shrink Shrimp\"",    
+    "build-linux": "npx electron-packager . Shrink-Shrimp --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/img/shrimp.png --prune=true --out=release-builds"
   },
   "repository": "https://github.com/bclicn/pdf-shrink",
   "devDependencies": {

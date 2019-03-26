@@ -308,6 +308,9 @@ function fileSize(filePath){
  */
 function shrinkRate(pth){
     let rate = 1-(fileSize(pth.out)/fileSize(pth.in));
+    if(rate < 0){
+        rate = 0;
+    }
     return Math.round(rate*100).toString() + '%';
 }
 

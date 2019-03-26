@@ -15,8 +15,8 @@ function createWindow () {
   // Create the browser window.
   // for more options, see https://electronjs.org/docs/api/browser-window#class-browserwindow
   win = new BrowserWindow({ 
-    width: 272,
-    height: 272,
+    width: 320,
+    height: 320,
     webPreferences: { 
       nodeIntegration: true
     }
@@ -24,6 +24,9 @@ function createWindow () {
 
   // no resize
   win.setResizable(false);
+
+  // hide menu
+  win.setMenu(null);
 
   // and load the index.html of the app.
   win.loadFile(path.join('assets','index.html'));
@@ -38,6 +41,7 @@ function createWindow () {
     // when you should delete the corresponding element.
     win = null;
   });
+
 }
 
 // This method will be called when Electron has finished

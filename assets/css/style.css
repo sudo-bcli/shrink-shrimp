@@ -102,7 +102,7 @@ body{
 }
 
 .log-table table:first-child{
-  width: 246px;
+  width: 280px;
   border: var(--border-log-table);
 }
 

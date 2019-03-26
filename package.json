@@ -1,0 +1,30 @@
+{
+  "name": "shrink-shrimp",
+  "version": "0.1.0",
+  "author": {
+    "name": "bcli",
+    "email": "bclicn@gmail.com"
+  },
+  "description": "Batch shrink scanned PDFs using GhostScript",
+  "license": "MIT",
+  "keywords": [
+    "PDF",
+    "Shrink",
+    "GhostScript"
+  ],
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "npx electron .",
+    "build": "",
+    "test": ""
+  },
+  "repository": "https://github.com/bclicn/pdf-shrink",
+  "devDependencies": {
+    "electron": "^4.1.1",
+    "electron-packager": "^13.1.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "shelljs": "^0.8.3"
+  }
+}

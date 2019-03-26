@@ -1,0 +1,27 @@
+# A universal .gitignore template for electron npm projects
+# bcli, Mar.25 2019
+
+# electron dependencies are PRETTY BIG (about 150mb) thus must be ignored at commit
+node_modules
+
+# npm generated list of  node_modules
+package-lock.json
+
+# system files of OSX & Win
+.DS_Store
+Thumbs.db
+
+# IDEs configurations
+# want to know more about IDE .gitignore?
+# @see https://www.gitignore.io/
+
+### VisualStudioCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch 
+# Ignore all local history of files
+.history

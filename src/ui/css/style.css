@@ -1,0 +1,184 @@
+/** 
+  CSS for our small web page (or interface if you like to call it in that way)
+  @author       bcli, Mar.25 2019
+  @description  I'm not using SASS now, since CSS3 would be just OK for this kind of small project
+                to read more about CSS variables
+  @see          https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+**/
+
+:root{
+  --parent-width: 256px;
+  --parent-color-bg: #ede091;
+  --shrimp-width: 180px;
+  --shrimp-img: url('../img/shrimp.png');
+  --shrimp-img-with-file: url('../img/shrimp-with-file.png');
+  --shrimp-rotate-deg: 360deg;
+  --shrimp-trans-duration: 0.2s;
+  --info-height: 32px;
+  --dbg-border: none;
+  --log-table-border: solid 1px #000000;
+  --log-table-color:          #dddddd;
+  --log-table-color-bg-th:    #4d4d4d;
+  --log-table-color-bg-even:  #e0d588;
+  --log-table-color-bg-odd:   #eede75;
+  --log-table-color-bg-hover: #d8d8d8;
+  --log-table-color-bg-error: #db7062;
+  --reset-btn-width: 72px;
+  --reset-btn-height: 36px;
+  --loading-icon-color:       #4d4d4d;
+  --loading-icon-width:         64px;
+  /* --border-dbg: solid #000000 1px;*/
+}
+
+body{
+  background-color: var(--parent-color-bg);
+}
+
+#parent{
+  padding-top: 10px;
+  text-align: center;
+  width: var(--parent-width);
+  height: var(--parent-width);
+  background-color: #ede091;
+  font-family: monospace;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.info-box{
+  margin:0 auto;
+  padding-top: 10px;
+  height: var(--info-height);
+  text-align: center;
+  line-height: calc(var(--info-height) - 5px);
+  width: calc(var(--parent-width) - 10px);
+  border: var(--border-dbg);
+  font-size: 20px;
+  vertical-align: center;
+}
+
+.info-box svg{
+  top: 2px;
+  position: relative;
+  height: 20px;
+}
+
+.shrimp-img{
+  margin: 0 auto;
+  height: var(--shrimp-width);
+  width: var(--shrimp-width);
+  border: var(--border-dbg);
+  background: var(--shrimp-img);
+  background-repeat: no-repeat;
+  background-size: var(--shrimp-width) var(--shrimp-width);
+  transform:rotate(calc(var(--shrimp-rotate-deg) * -1));
+  transition-property: transform background;
+  transition-duration: var(--shrimp-trans-duration);
+  transition-timing-function: ease-in-out;
+}
+
+.shrimp-img-with-file{
+  margin: 0 auto;
+  height: var(--shrimp-width);
+  width: var(--shrimp-width);
+  border: var(--border-dbg);
+  background: var(--shrimp-img-with-file);
+  background-repeat: no-repeat;
+  background-size: var(--shrimp-width) var(--shrimp-width);
+  transform:rotate(calc(var(--shrimp-rotate-deg)));
+  transition-property: transform background;
+  transition-duration: var(--shrimp-trans-duration);
+  transition-timing-function: ease-in-out;
+}
+
+.log-table{
+  margin: 0 auto;
+  display: none;
+  text-align: left;
+  padding: 10px 1px 5px 1px;
+  margin-bottom: 64px;
+}
+
+.log-table table:first-child{
+  width: 246px;
+  border: var(--border-log-table);
+}
+
+.log-table table:first-child th{
+  color: var(--log-table-color);
+  background-color: var(--log-table-color-bg-th);
+}
+
+.log-table table:first-child td,th{
+  padding: 8px;
+}
+
+.log-table table:first-child tr{
+  cursor: pointer;
+}
+
+.log-table table:first-child tr:nth-child(even){
+  background-color: var(--log-table-color-bg-even);
+}
+
+.log-table table:first-child tr:nth-child(odd){
+  background-color: var(--log-table-color-bg-odd);
+}
+
+.log-table table:first-child tr:hover{
+  background-color: var(--log-table-color-bg-hover);
+}
+
+.reset-btn{
+  display: none;
+  margin:0 auto;
+  text-align: center;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transform:rotate(calc(var(--shrimp-rotate-deg) * -1));
+  transition-property: opacity transform;
+  transition-duration: var(--shrimp-trans-duration);
+  transition-timing-function: ease-in-out;
+}
+
+.reset-btn img{
+  width: 72px;
+  height: 72px;
+  opacity: 0.8;
+}
+
+.reset-btn:hover{
+  opacity: 1;
+  transform:rotate(calc(var(--shrimp-rotate-deg)));
+  transition-property: opacity transform;
+  transition-duration: var(--shrimp-trans-duration);
+  transition-timing-function: ease-in-out;
+}
+
+.icon-box{
+  margin: 0 auto;
+  padding-top: 15px;
+  display: none;
+  height: var(--loading-icon-width);
+  width: var(--loading-icon-width);
+}
+
+.icon-box svg{
+  height: var(--loading-icon-width);
+  width: var(--loading-icon-width);
+  fill: var(--loading-icon-color);
+}
+
+#loading-icon{
+  display: none;
+}
+
+#done-icon{
+  display: none;
+}
+

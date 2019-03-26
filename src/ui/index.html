@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- win title -->
+    <title>Shrink Shrimp</title>
+    <!-- css reference -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- just a....conatiner for the stuff below -->
+    <div class="parent">
+        <div id="icon" class="icon-box"></div>
+        <!-- title, appears above the shrimp -->
+        <div id="info" class="info-box"></div>
+        <!-- drag your pdf files to our stupid shrimp to shrink -->
+        <div id="shrimp" class="shrimp-img"></div>
+        <!-- log table, default hidden, show files which are being shrinked -->
+        <div id="log" class="log-table">
+            <table></table>
+        </div>
+        <!-- reset button, default hidden, reset to shrimp page after shrinking is done-->
+        <div id="reset" class="reset-btn">
+            <img src="img/shrimp.png" alt="">
+        </div>
+    </div>
+    <div id="loading-icon">
+      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="28px" height="28px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+        <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+          <animateTransform attributeType="xml"
+            attributeName="transform"
+            type="rotate"
+            from="0 25 25"
+            to="360 25 25"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+        </path>
+      </svg>
+    </div>
+    <div id="done-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/>
+        </svg>
+    </div>
+    <script>
+      // script for this rendering process
+      require('../js/renderer.js')
+    </script>
+  </body>
+</html>

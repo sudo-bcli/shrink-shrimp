@@ -1,7 +1,6 @@
 /**
  * Electron Main Process
  * @author bcli
- * @see 
  */
 
 // Modules to control application life and create native browser window
@@ -24,13 +23,13 @@ function createWindow () {
   });
 
   // no resize
-  win.setResizable(false)
+  //win.setResizable(false)
 
   // and load the index.html of the app.
-  win.loadFile(path.join('src','ui','index.html'));
+  win.loadFile(path.join('assets','index.html'));
 
   // Open the DevTools.
-  //win.webContents.openDevTools();
+  win.webContents.openDevTools();
 
   // Emitted when the window is closed.
   win.on('closed', function () {

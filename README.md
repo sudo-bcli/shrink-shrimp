@@ -3,7 +3,7 @@
 **Desktop application for batch shrinking PDFs**
 *Best with scanned documents!*
 
-[logo](src/ui/img/shrimp.png)
+![logo](src/ui/img/shrimp.png)
 
 ## Install ##
 

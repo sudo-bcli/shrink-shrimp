@@ -1,6 +1,6 @@
 # 压缩虾 #
 
-**一个可以运行GhostScript的Electron图形化界面，可以用于批量压缩扫描来的PDF文件**
+**一个可以运行GhostScript的Electron图形化界面，可以用于批量压缩PDF文件**
 
 [English Ver.](README_CN.md)
 
@@ -22,16 +22,16 @@
 2. 等待压缩完成
 3. 压缩后的PDF文件与源文件在相同文件夹下，并有*shrink*前缀
 4. 压缩后点击右下角的虾米图标重置页面
-5. 如果遇到错误，将鼠标挪到记录上查看错误信息
+5. 如果遇到错误，将鼠标挪到记录上可查看错误信息
 
-__注意:__  要在**OSX**或**Ubuntu**上使用，你需要预先安装 `GhostScript`。**Windows** 版本已经包括`GhostScript`，无需另行安装
+__注意:__ 在**OSX**或**Ubuntu**上使用需要预先安装 `GhostScript`。**Windows** 版本安装包已经包括`GhostScript`，无需另行安装
 
 * __OSX:__ `brew install ghostscript`
 * __Ubuntu:__ `sudo apt-get install ghostscript` (你可能需要设置镜像，请自行百度)
 
 ## 开发 ##
 
-假设你已经安装了 `nodejs 10+` 和 `npm`
+假设你已经安装了 `node 10+` 和 `npm`
 
     cd /to/some/dir/
     git clone https://github.com/bclicn/shrink-shrimp.git
@@ -53,7 +53,7 @@ __注意:__  要在**OSX**或**Ubuntu**上使用，你需要预先安装 `GhostS
     // 在 Linux 上
     npm run build-linux 
 
-**注意:** 在**Windows**上编译完成后，下载[gs-926-win32-x64.zip](https://github.com/bclicn/shrink-shrimp/releases/download/0.1.0/gs-926-win32-x64.zip), 并将 `gsdll64.dll`和`gs.exe`拷贝到`shrink_shrimp.exe`所在的文件夹下,则无需预先安装`GhostScript`
+**注意:** 在**Windows**上编译完成后，下载[gs-926-win32-x64.zip](https://github.com/bclicn/shrink-shrimp/releases/download/0.1.0/gs-926-win32-x64.zip), 并将 `gsdll64.dll`和`gs.exe`拷贝到`shrink_shrimp.exe`所在目录
 
 ## 错误报告 ##
 

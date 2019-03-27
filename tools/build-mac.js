@@ -15,7 +15,7 @@ const opt = {
     "copyright":    "MIT License",                   // copyright info
 };
 
-const cmd = `npx electron-packager . ${opt.name} --platform=${opt.platform} --arch=${opt.arch} --app-version=${process.env.npm_package_version} --build-version=${process.env.npm_package_version} --icon=${opt.icon} --overwrite --prune=true --out=./release-builds/${process.env.npm_package_version}/`;
+const cmd = `npx electron-packager . ${opt.name} --platform=${opt.platform} --arch=${opt.arch} --app-version=${process.env.npm_package_version} --build-version=${process.env.npm_package_version} --icon=${opt.icon} --overwrite --asar --prune=true --out=./release-builds/${process.env.npm_package_version}/`;
 
 if(os.platform != 'darwin'){
     console.warn('You are trying to build a OSX release on ' + os.platform + ', this may cause unexpect results.');

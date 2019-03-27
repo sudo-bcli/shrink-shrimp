@@ -58,9 +58,7 @@ __Note:__ after building on Windows, you can download [gs-926-win32-x64.zip](htt
 
 ## Bug Report ##
 
-When using [Issue Tab](https://github.com/bclicn/shrink-shrimp/issues),
-please try to provide as much information as possible, espacially the error messages (__hover on table row to see it!__)
-
+Please use [Issue Tab](https://github.com/bclicn/shrink-shrimp/issues),
 
 ## License ##
 [MIT](LICENSE)

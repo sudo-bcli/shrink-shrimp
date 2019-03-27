@@ -9,13 +9,22 @@
 
  // libraries
 const fs     = require('fs');           // file system
+const os     = require('os');           // operating system
 const path   = require('path');         // path joiner
 const $      = require('jquery');       // jQuery
 const shell  = require('shelljs');      // cli executor
 const lang   = require('./locales').en; // locales
 
-// suffix of shrinked files
+// prefix of shrinked files
 const pdf_prefix = 'shrink_';
+
+// on OSX, gs can be accessed by both terminal & npm start but not
+// the packed Application, thus I have to do a walk around by providing
+// absolute path to gs executable
+let gs = 'gs';
+if(os.platform == 'darwin'){
+    gs = '/usr/local/bin/gs';
+}
 
 // global varialbes, DO NOT CHANGE
 let shrinking = false;
@@ -200,7 +209,7 @@ function parsePath(pdfPath) {
  */
 function pdf2ps(pdfPath, psPath){
     return new Promise((resolve, reject) => {
-        let cmd = `gs -q -dNOPAUSE -dBATCH -P- -dSAFER -sDEVICE=ps2write "-sOutputFile=${psPath}"  -c save pop -f "${pdfPath}"`;
+        let cmd = `${gs} -q -dNOPAUSE -dBATCH -P- -dSAFER -sDEVICE=ps2write "-sOutputFile=${psPath}"  -c save pop -f "${pdfPath}"`;
         shell.exec(cmd, {silent:true}, (code, stdout, stderr)=>{
             if(code === 0){
                 resolve({code: code, stdout: stdout, stderr: stderr});
@@ -218,7 +227,7 @@ function pdf2ps(pdfPath, psPath){
  */
 function ps2pdf(psPath, pdfPath){
     return new Promise((resolve, reject) => {
-        let cmd = `gs -P- -dSAFER -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sstdout=%stderr "-sOutputFile=${pdfPath}" -P- -dSAFER -c .setpdfwrite -f "${psPath}"`;
+        let cmd = `${gs} -P- -dSAFER -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sstdout=%stderr "-sOutputFile=${pdfPath}" -P- -dSAFER -c .setpdfwrite -f "${psPath}"`;
         shell.exec(cmd, {silent:true}, (code, stdout, stderr)=>{
             if(code === 0){
                 resolve({code: code, stdout: stdout, stderr: stderr});
@@ -313,7 +322,6 @@ function shrinkRate(pth){
     }
     return Math.round(rate*100).toString() + '%';
 }
-
 
 /**
  * -------------------

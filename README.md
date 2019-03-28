@@ -1,6 +1,6 @@
 # Shrink Shrimp #
 
-**Batch shrinking scanned PDFs, a Electron GUI wrapper for GhostScript**
+**Batch shrink scanned PDFs, a Electron GUI wrapper for GhostScript**
 
 [中文版说明点这里](README_CN.md)
 

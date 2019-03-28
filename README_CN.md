@@ -36,6 +36,8 @@ __注意:__ 在**OSX**或**Ubuntu**上使用需要预先安装 `GhostScript`。*
     cd /to/some/dir/
     git clone https://github.com/bclicn/shrink-shrimp.git
 
+    cd shrink-shrimp
+
     // 中国用户下载electron会很慢，建议先添加淘宝npm源
     npm install -g mirror-config-china --registry=http://registry.npm.taobao.org
 
@@ -51,7 +53,7 @@ __注意:__ 在**OSX**或**Ubuntu**上使用需要预先安装 `GhostScript`。*
     // 在 OSX 上
     npm run build-mac
     // 在 Linux 上
-    npm run build-linux 
+    npm run build-lin
 
 **注意:** 在**Windows**上编译完成后，下载[gs-926-win32-x64.zip](https://github.com/bclicn/shrink-shrimp/releases/download/0.1.0/gs-926-win32-x64.zip), 并将 `gsdll64.dll`和`gs.exe`拷贝到`shrink_shrimp.exe`所在目录
 

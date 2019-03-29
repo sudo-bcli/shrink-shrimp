@@ -6,6 +6,10 @@
 
 ![logo](assets/img/shrimp.png)
 
+## 效果展示 ##
+
+[![YouTube Video](https://img.youtube.com/vi/d5z3TobVclQ/hqdefault.jpg)](https://youtu.be/d5z3TobVclQ)
+
 ## 下载 ##
 
 **当前版本： 0.1.0**

@@ -6,6 +6,10 @@
 
 ![logo](assets/img/shrimp.png)
 
+## Showcase ##
+
+[![YouTube Video](https://img.youtube.com/vi/d5z3TobVclQ/hqdefault.jpg)](https://youtu.be/d5z3TobVclQ)
+
 ## Download ##
 
 **Current Version 0.1.0**

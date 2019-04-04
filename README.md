@@ -8,7 +8,7 @@
 
 ## Showcase ##
 
-[![YouTube Video](https://img.youtube.com/vi/d5z3TobVclQ/hqdefault.jpg)](https://youtu.be/d5z3TobVclQ)
+![showcase](showcase.gif)
 
 ## Download ##
 

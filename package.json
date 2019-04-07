@@ -1,4 +1,5 @@
 {
+
   "name": "shrink-shrimp",
   "version": "0.1.0",
   "author": {
@@ -7,7 +8,11 @@
   },
   "description": "Batch shrink scanned PDFs, Electron GUI wrapper for GhostScript",
   "license": "MIT",
-  "os": ["win", "linux", "macos"],
+  "os": [
+    "win32",
+    "linux",
+    "macos"
+  ],
   "repository": "https://github.com/bclicn/shrink-shrimp.git",
   "keywords": [
     "PDF",

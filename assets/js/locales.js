@@ -1,6 +1,6 @@
 /**
  * Locales
- * @author bcli, Mar.25 2019
+ * @author bcli
  * @description currently we support English(en), Simplified Chinese(zh_cn) and Traditional Chinese (zh_tw)
  *              to add another language, please follow the language code bellow and export it here and import in the rednerer.js
  * @see https://www.w3schools.com/tags/ref_language_codes.asp
@@ -20,7 +20,7 @@ const en = {
 
 // Simplified Chinese
 const zh_cn = {
-    name:           "虾压",
+    name:           "压缩虾",
     drop_pdf_here:  "拖拽PDF至此",
     pdf_not_found:  "无PDF文件",
     error:          "错误",
@@ -32,7 +32,7 @@ const zh_cn = {
 
 // Tranditional Chinese
 const zh_tw = {
-    name:           "蝦壓",
+    name:           "壓縮蝦",
     drop_pdf_here:  "拖拽PDF至此",
     pdf_not_found:  "無PDF文件",
     error:          "錯誤",

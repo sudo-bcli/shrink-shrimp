@@ -1,7 +1,6 @@
 /**
  * @name Render_Process
  * @author bcli
- * @license MIT
  * @description 
  * @see https://www.npmjs.com/package/jquery
  * @see https://www.npmjs.com/package/shelljs

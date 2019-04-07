@@ -1,33 +1,31 @@
 /** 
-  CSS for our small web page (or interface if you like to call it in that way)
-  @author       bcli, Mar.25 2019
-  @description  I'm not using SASS now, since CSS3 would be just OK for this kind of small project
-                to read more about CSS variables
+  Style for ../index.html
+  @author       bcli
+  @description  using native CSS3 instead of SASS, may upgrade to SASS in future
   @see          https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 **/
 
+/* CSS variables */
 :root{
-  --parent-width: 256px;
-  --parent-color-bg: #ede091;
-  --shrimp-width: 180px;
-  --shrimp-img: url('../img/shrimp.png');
-  --shrimp-img-with-file: url('../img/shrimp-with-file.png');
-  --shrimp-rotate-deg: 360deg;
-  --shrimp-trans-duration: 0.2s;
-  --info-height: 32px;
-  --dbg-border: none;
-  --log-table-border: solid 1px #000000;
+  --parent-width:             256px;
+  --parent-color-bg:        #ede091;
+  --shrimp-width:             180px;
+  --shrimp-img:               url('../img/shrimp.png');
+  --shrimp-img-with-file:     url('../img/shrimp-with-file.png');
+  --shrimp-rotate-deg:        360deg;
+  --shrimp-trans-duration:    0.2s;
+  --info-height:              32px;
+  --log-table-border:         solid 1px #000000;
   --log-table-color:          #dddddd;
   --log-table-color-bg-th:    #4d4d4d;
   --log-table-color-bg-even:  #e0d588;
   --log-table-color-bg-odd:   #eede75;
   --log-table-color-bg-hover: #d8d8d8;
   --log-table-color-bg-error: #db7062;
-  --reset-btn-width: 72px;
-  --reset-btn-height: 36px;
+  --reset-btn-width:          72px;
+  --reset-btn-height:         36px;
   --loading-icon-color:       #4d4d4d;
-  --loading-icon-width:         64px;
-  /* --border-dbg: solid #000000 1px;*/
+  --loading-icon-width:       64px;
 }
 
 body{
@@ -181,4 +179,3 @@ body{
 #done-icon{
   display: none;
 }
-

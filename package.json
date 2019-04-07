@@ -5,8 +5,10 @@
     "name": "bcli",
     "email": "bclicn@gmail.com"
   },
-  "description": "Batch shrink scanned PDFs using GhostScript, a Gui wrapper for gs command",
+  "description": "Batch shrink scanned PDFs, Electron GUI wrapper for GhostScript",
   "license": "MIT",
+  "os": ["win", "linux", "macos"],
+  "repository": "https://github.com/bclicn/shrink-shrimp.git",
   "keywords": [
     "PDF",
     "Shrink",
@@ -19,7 +21,6 @@
     "build-win": "node ./tools/build-win.js",
     "build-lin": "node ./tools/build-lin.js"
   },
-  "repository": "https://github.com/bclicn/shrink-shrimp",
   "devDependencies": {
     "electron": "^4.1.1",
     "electron-packager": "^13.1.1"

@@ -32,7 +32,7 @@ __Note:__  You would need to pre-install `GhostScript` on __OSX__ and __Ubuntu__
 GhostScript on Windows.
 
 * __OSX:__ `brew install ghostscript`
-* __Ubuntu:__ `sudo apt-get install ghostscript` (addtinal mirror might be required)
+* __Ubuntu:__ `sudo apt-get install ghostscript` (additional mirror may be required)
 
 ## Develop ##
 
@@ -58,7 +58,7 @@ Follow the steps in __Develop__ then
 
     // on OSX
     npm run build-mac
-    
+
     // on Linux
     npm run build-lin
 

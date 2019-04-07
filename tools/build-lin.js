@@ -1,7 +1,7 @@
 /**
  * Linux Builder
  * @author bcli
- * @description a installer.sh would be auto-generated to create a desktop icon for you
+ * @description builder for Linux x64, tested on Ubuntu 16.04 x64
  * @see https://github.com/electron-userland/electron-packager/blob/master/usage.txt
  */
 

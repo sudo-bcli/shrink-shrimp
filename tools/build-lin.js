@@ -1,36 +1,48 @@
 /**
  * Linux Builder
  * @author bcli
+ * @description a installer.sh would be auto-generated to create a desktop icon for you
  * @see https://github.com/electron-userland/electron-packager/blob/master/usage.txt
  */
 
-const shell = require('shelljs');
-const os = require('os');
+const builder = require('./builder');
 
+// cli options
 const opt = {
-    "name":         "shrink_shrimp",                 // name of executable
-    "platform":     "linux",                        // target platform
-    "arch":         "x64",                           // target arch
-    "icon":         "assets/icon/shrimp_lin.png",// app icon, @see https://elliotekj.com/2014/05/27/how-to-create-high-resolution-icns-files/
-    "copyright":    "MIT License"                   // copyright info
+    name:         "shrink_shrimp",                // name of executable
+    version:      process.env.npm_package_version,// use version defined in package.json
+    platform:     "linux",                        // target platform
+    arch:         "x64",                          // target arch
+    icon:         "assets/icon/shrimp_lin.png",   // app icon
+    copyright:    "MIT License",                  // copyright
+    remove:       [                               // remove some unnecessary files which will only add to release size
+                        'locales',
+                        'swiftshader',
+                        'chrome_100_percent.pak',      
+                        'chrome_200_percent.pak',
+                        'libVkICD_mock_icd.so',
+                        'libGLESv2.so',
+                        'libVkICD_mock_icd.so',
+                        'LICENSES.chromium.html',
+                        'snapshot_blob.bin'
+                    ]
 };
 
-const cmd = `npx electron-packager . ${opt.name} --platform=${opt.platform} --arch=${opt.arch} --app-version=${process.env.npm_package_version} --build-version=${process.env.npm_package_version} --icon=${opt.icon} --overwrite --asar --no-deref-symlinks --prune=true --out=./release-builds/${process.env.npm_package_version}/`;
+// electron packager command
+const command = `npx electron-packager . ${opt.name} --platform=${opt.platform} --arch=${opt.arch} --app-version=${opt.version} --build-version=${opt.version} --icon=${opt.icon} --overwrite --asar --no-deref-symlinks --prune=true --out=./release-builds/${opt.version}/`;
 
-if(os.platform != 'linux'){
-    console.warn('You are trying to build a Linux release on ' + os.platform + ', this may cause unexpect results.');
-}else{
-    console.log(`Building Linux Release of ${opt.name}...`);
-    console.log(process.cwd());
-    console.log(cmd);
+
+async function build(){
+    try{
+        await builder.prebuild(opt);
+        await builder.build(command);
+        await builder.postbuild(opt);
+        console.log('BUILD COMPLETE');
+        process.exit(0);
+    }catch(err){
+        console.error(err);
+        process.exit(1);
+    }
 }
 
-shell.exec(cmd,{silent:true},(code,stdout,stderr)=>{
-    if(code === 0){
-        console.log('Done');
-        console.log(`built under ./release-builds/${process.env.npm_package_version}/`);
-    }else{
-        console.error('Failed');
-        console.error(stderr);
-    }
-});
+build();

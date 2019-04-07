@@ -1,11 +1,13 @@
 /**
  * Electron Main Process
  * @author bcli
+ * @description main process which creates our window
+ * @see https://electronjs.org/docs/tutorial/first-app
  */
 
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron');
-const path = require('path');
+const {app, BrowserWindow} = require('electron'); // electron components
+const path = require('path');                     // path
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -15,8 +17,8 @@ function createWindow () {
   // Create the browser window.
   // for more options, see https://electronjs.org/docs/api/browser-window#class-browserwindow
   win = new BrowserWindow({ 
-    width: 320,
-    height: 320,
+    width: 320,         // window width
+    height: 320,        // window height
     webPreferences: { 
       nodeIntegration: true
     }
@@ -31,7 +33,7 @@ function createWindow () {
   // and load the index.html of the app.
   win.loadFile(path.join('assets','index.html'));
 
-  // Open the DevTools.
+  // open the DevTools.
   //win.webContents.openDevTools();
 
   // Emitted when the window is closed.
@@ -66,6 +68,7 @@ app.on('activate', function () {
   }
 });
 
-
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+// our shrinking process is defined in assets/js/renderer.js

@@ -20,7 +20,7 @@
 
 Or visit [Release Page](https://github.com/bclicn/shrink-shrimp/releases).
 
-## Usage ##
+## Use ##
 
 1. __Drag & Drop__ one or multiple PDFs to the __Shrimp__
 2. Wait for the process to finish
@@ -36,7 +36,7 @@ GhostScript on Windows.
 
 ## Develop ##
 
-Assuming you have `node 10+` and `npm` installed.
+Assume you have `node 10+` and `npm` installed
 
     cd /to/some/dir/
     git clone https://github.com/bclicn/shrink-shrimp.git
@@ -55,16 +55,18 @@ Follow the steps in __Develop__ then
 
     // on Windows 64bit
     npm run build-win
+
     // on OSX
     npm run build-mac
+    
     // on Linux
     npm run build-lin
 
 __Note:__ after building on Windows, you can download [gs-926-win32-x64.zip](https://github.com/bclicn/shrink-shrimp/releases/download/0.1.0/gs-926-win32-x64.zip), then copy `gsdll64.dll` and `gs.exe` to the directory of `shrink_shrimp.exe`
 
-## Bug Report ##
+## Bug ##
 
-Please use [Issue Tab](https://github.com/bclicn/shrink-shrimp/issues),
+Please use [Issue Tab](https://github.com/bclicn/shrink-shrimp/issues) if you encounter a bug.
 
 ## License ##
 [MIT](LICENSE)

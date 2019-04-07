@@ -54,8 +54,10 @@ __注意:__ 在**OSX**或**Ubuntu**上使用需要预先安装 `GhostScript`。*
 
     // 在 Windows 64位 上
     npm run build-win
+
     // 在 OSX 上
     npm run build-mac
+    
     // 在 Linux 上
     npm run build-lin
 
